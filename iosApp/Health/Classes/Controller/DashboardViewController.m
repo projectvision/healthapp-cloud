@@ -235,11 +235,11 @@ static CGFloat const kHeaderHeight = 30.0f;
             
         //activities
         case 1:
-            return 4;
+            return 2;
             
         //completion rate
         case 2:
-            return 2;
+            return 1;
             
         //healthrisk
         case 3:
@@ -281,9 +281,9 @@ static CGFloat const kHeaderHeight = 30.0f;
         case 1:
         {
             NSDate *date = _humanAPIData[@"Date"];
-            NSString *string = date ? [NSString stringWithFormat:@"Activities for date: %@", [NSDateFormatter localizedStringFromDate:date
+            NSString *string = date ? [NSString stringWithFormat:@"Today's Activity: %@", [NSDateFormatter localizedStringFromDate:date
                                                                                                                             dateStyle:NSDateFormatterShortStyle
-                                                                                                                        timeStyle:NSDateFormatterNoStyle]] : @"Activities for date:";
+                                                                                                                        timeStyle:NSDateFormatterNoStyle]] : @"Today's Activity:";
             label.text = string;
             break;
         }
@@ -291,14 +291,14 @@ static CGFloat const kHeaderHeight = 30.0f;
         //completion rate
         case 2:
         {
-            label.text = @"Challenges Completion Rate:";
+            label.text = @"Challenge Stats:";
             break;
         }
             
         //healthrisk
         case 3:
         {
-            label.text = @"Health Risk Level:";
+            label.text = @"How Healthy Am I?:";
             break;
         }
             
@@ -334,8 +334,9 @@ static CGFloat const kHeaderHeight = 30.0f;
     else if (indexPath.section == 1)
     {
         UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@""
-                                                             message:@"Please insert Healthdata through HealthKit "
-                                                            delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"YES", nil];
+                                                             message:@"Activity data is periodically updated by HealthKit "
+                                                            delegate:nil cancelButtonTitle:@"Cancel"                 otherButtonTitles:@"Thanks!", nil
+                                   ];
         alertView.tag = 2;
         [alertView show];
     }
@@ -388,90 +389,90 @@ static CGFloat const kHeaderHeight = 30.0f;
         {
             SummaryCell *summaryCell = (SummaryCell *)[[[NSBundle mainBundle] loadNibNamed:@"SummaryCell" owner:self options:nil] objectAtIndex:0];
  
+//            if (indexPath.row == 0)
+//            {
+//                if (_fitbitData)
+//                {
+//                    NSString *resultString = nil;
+//                    
+//                    if (_fitbitData[@"data"])
+//                    {
+//                        NSString *hr = _fitbitData[@"data"][@"RestingHR"] ? _fitbitData[@"data"][@"RestingHR"] : @"0";
+//                        resultString = [NSString stringWithFormat:@"%@ BPM", hr];
+//                    }
+//                    else
+//                    {
+//                        resultString = @"No Fitbit";
+//                    }
+//                    
+//                    [summaryCell setSummaryCell:@"Heart Rate:" :resultString];
+//                }
+//                else
+//                {
+//                    [summaryCell setSummaryCell:@"Heart Rate:" :@"0"];
+//
+//                   if(self.dashboardData==nil)
+//                        [summaryCell setSummaryCell:@"Heart Rate:" :@"0"];
+//                    else
+//                        [summaryCell setSummaryCell:@"Heart Rate:" :[[self.dashboardData valueForKey:@"heartRate"] stringValue]];
+//                }
+//            }
+//            else if (indexPath.row == 1)
+//            {
+//                if (_humanAPIData)
+//                {
+//                    if (_humanAPIData[@"data"])
+//                    {
+//                        NSString *sleep = _humanAPIData[@"data"][@"TotalSleepMinutes"] ? _humanAPIData[@"data"][@"TotalSleepMinutes"] : @"0";
+//                        [summaryCell setTimeCellWithTitle:@"Sleep:" time:[sleep integerValue]];
+//                    }
+//                    else
+//                    {
+//                        if (_fitbitData)
+//                        {
+//                            if (_fitbitData[@"data"])
+//                            {
+//                                NSString *sleep = _fitbitData[@"data"][@"TotalSleepMinutes"] ? _fitbitData[@"data"][@"TotalSleepMinutes"] : @"0";
+//                                [summaryCell setTimeCellWithTitle:@"Sleep:" time:[sleep integerValue]];
+//                            }
+//                            else
+//                            {
+//                                [summaryCell setSummaryCell:@"Sleep:" :@"No Fitbit"];
+//                            }
+//                        }
+//                        else
+//                        {
+//                            [summaryCell setSummaryCell:@"Sleep:" :@"loading..."];
+//                        }
+//                    }
+//                }
+//                else
+//                {
+//                    [summaryCell setSummaryCell:@"Sleep:" :@"loading..."];
+//                    [summaryCell setTimeCellWithTitle:@"Sleep:" time:[[self.dashboardData valueForKey:@"sleep" ]integerValue]];
+//                  
+//                }
+//            }
             if (indexPath.row == 0)
             {
-                if (_fitbitData)
-                {
-                    NSString *resultString = nil;
-                    
-                    if (_fitbitData[@"data"])
-                    {
-                        NSString *hr = _fitbitData[@"data"][@"RestingHR"] ? _fitbitData[@"data"][@"RestingHR"] : @"0";
-                        resultString = [NSString stringWithFormat:@"%@ BPM", hr];
-                    }
-                    else
-                    {
-                        resultString = @"No Fitbit";
-                    }
-                    
-                    [summaryCell setSummaryCell:@"Heart Rate:" :resultString];
-                }
+                if(self.dashboardData==nil)
+                [summaryCell setSummaryCell:@"Step Count:" :@"0"];
                 else
-                {
-                    [summaryCell setSummaryCell:@"Heart Rate:" :@"0"];
-
-                   if(self.dashboardData==nil)
-                        [summaryCell setSummaryCell:@"Heart Rate:" :@"0"];
-                    else
-                        [summaryCell setSummaryCell:@"Heart Rate:" :[[self.dashboardData valueForKey:@"heartRate"] stringValue]];
-                }
-            }
+                [summaryCell setSummaryCell:@"Step Count:" :[[self.dashboardData valueForKey:@"stepCount"] stringValue]];
+                          }
             else if (indexPath.row == 1)
             {
-                if (_humanAPIData)
-                {
-                    if (_humanAPIData[@"data"])
-                    {
-                        NSString *sleep = _humanAPIData[@"data"][@"TotalSleepMinutes"] ? _humanAPIData[@"data"][@"TotalSleepMinutes"] : @"0";
-                        [summaryCell setTimeCellWithTitle:@"Sleep:" time:[sleep integerValue]];
-                    }
-                    else
-                    {
-                        if (_fitbitData)
-                        {
-                            if (_fitbitData[@"data"])
-                            {
-                                NSString *sleep = _fitbitData[@"data"][@"TotalSleepMinutes"] ? _fitbitData[@"data"][@"TotalSleepMinutes"] : @"0";
-                                [summaryCell setTimeCellWithTitle:@"Sleep:" time:[sleep integerValue]];
-                            }
-                            else
-                            {
-                                [summaryCell setSummaryCell:@"Sleep:" :@"No Fitbit"];
-                            }
-                        }
-                        else
-                        {
-                            [summaryCell setSummaryCell:@"Sleep:" :@"loading..."];
-                        }
-                    }
-                }
-                else
-                {
-                    [summaryCell setSummaryCell:@"Sleep:" :@"loading..."];
-                    [summaryCell setTimeCellWithTitle:@"Sleep:" time:[[self.dashboardData valueForKey:@"sleep" ]integerValue]];
-                  
-                }
-            }
-            else if (indexPath.row == 2)
-            {
-                if(self.dashboardData==nil)
-                [summaryCell setSummaryCell:@"Steps:" :@"0"];
-                else
-                [summaryCell setSummaryCell:@"Steps:" :[[self.dashboardData valueForKey:@"stepCount"] stringValue]];
-                          }
-            else if (indexPath.row == 3)
-            {
-                [summaryCell setSummaryCell:@"Distance:" :@"loading.."];
+                [summaryCell setSummaryCell:@"Distance Travelled:" :@"loading.."];
                 if(self.dashboardData==nil)
                 {
-                    [summaryCell setSummaryCell:@"Distance:" :@"0"];
+                    [summaryCell setSummaryCell:@"Distance Travelled:" :@"0"];
                 }
                 else
                 {
                     NSMutableString *dist=[[self.dashboardData valueForKey:@"distance"] stringValue];
                     if(dist.length>6)
                         dist=[dist substringToIndex:6];
-                    [summaryCell setSummaryCell:@"Distance:" :dist];
+                    [summaryCell setSummaryCell:@"Distance Travelled:" :dist];
                 }
             }
             else
