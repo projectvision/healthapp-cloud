@@ -486,7 +486,7 @@ static CGFloat const kHeaderHeight = 30.0f;
                     
                     
                     dist = [dist stringByAppendingString:[NSString stringWithFormat:@" %@",units]];
-                    [summaryCell setSummaryCell:@"Distance:" :dist];
+                    [summaryCell setSummaryCell:@"Distance Travelled:" :dist];
 
                 }
             }
@@ -633,10 +633,10 @@ static CGFloat const kHeaderHeight = 30.0f;
 {
     SummaryCell *summaryCell = (SummaryCell *)[[[NSBundle mainBundle] loadNibNamed:@"SummaryCell" owner:self options:nil] objectAtIndex:0];
     if (indexPath.row == 0) {
-        [summaryCell setSummaryCell:@"For 2 weeks: " :[self current2WeeksProgress]];
-    } else {
-        [summaryCell setSummaryCell:@"For last 2 weeks: " :[self last2WeeksProgress]];
-    }
+        [summaryCell setSummaryCell:@"Success Rate: " :[self current2WeeksProgress]];
+    } //else {
+      //  [summaryCell setSummaryCell:@"For last 2 weeks: " :[self last2WeeksProgress]];
+   // }
 
    
 
