@@ -335,7 +335,7 @@ static CGFloat const kHeaderHeight = 30.0f;
     {
         UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@""
                                                              message:@"Activity data is periodically updated by HealthKit "
-                                                            delegate:nil cancelButtonTitle:@"Cancel"                 otherButtonTitles:@"Thanks!", nil
+                                                            delegate:nil cancelButtonTitle:@"Thanks!"                 otherButtonTitles:nil, nil
                                    ];
         alertView.tag = 2;
         [alertView show];
