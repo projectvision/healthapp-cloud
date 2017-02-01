@@ -1,0 +1,5 @@
+#!/bin/sh
+
+DIR=`xcodebuild -sdk iphonesimulator -workspace "Yabbit.xcworkspace" -scheme "Yabbit" -configuration "Debug" -showBuildSettings | grep '^\s*BUILT_PRODUCTS_DIR' | head -n 1 | sed 's/^\(.*\)\s*=\s*\(.*\)$/\2/'`
+#instruments -t "/Applications/Xcode-6.3.1.app/Contents/Applications/Instruments.app/Contents/PlugIns/AutomationInstrument.xrplugin/Contents/Resources/Automation.tracetemplate" -w "iPhone 5s (8.3 Simulator)" "/Users/distiller/Library/Developer/Xcode/DerivedData/Yabbit-bflznhwzevvfgscekrwvmyfjrfrm/Build/Products/Debug-iphonesimulator/Yabbit.app" -e UIASCRIPT "scripts/automation.js" -e UIARESULTSPATH $CIRCLE_ARTIFACTS/
+instruments -t /Applications/Xcode-6.3.1.app/Contents/Applications/Instruments.app/Contents/PlugIns/AutomationInstrument.xrplugin/Contents/Resources/Automation.tracetemplate -w 'iPhone 5s (8.3 Simulator)' $DIR/Yabbit.app -e UIASCRIPT scripts/automation.js -e UIARESULTSPATH $CIRCLE_ARTIFACTS/																															

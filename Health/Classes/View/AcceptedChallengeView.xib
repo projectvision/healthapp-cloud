@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="L0n-XD-Eic" customClass="AcceptedChallengeView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="144"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L0n-XD-Eic" id="Anb-Lw-jKh">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="143"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ico_back_challenge_diet_lv1.png" translatesAutoresizingMaskIntoConstraints="NO" id="j2o-YT-GBY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="144"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxX-Xb-i63" customClass="FUIButton">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="144"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="45 points" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS6-0i-s5u">
+                        <rect key="frame" x="21" y="104" width="280" height="26"/>
+                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                        <color key="textColor" red="0.30980392159999998" green="0.75686274509999996" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <size key="shadowOffset" width="0.0" height="1"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Go for a 15 minute run" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhq-eN-6pf">
+                        <rect key="frame" x="20" y="20" width="280" height="28"/>
+                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                        <color key="textColor" red="0.30980392159999998" green="0.75686274509999996" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <size key="shadowOffset" width="0.0" height="1"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Focus: Fitness" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xP-5N-yeX">
+                        <rect key="frame" x="23" y="50" width="280" height="21"/>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                    </label>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_accepted_challenge.png" translatesAutoresizingMaskIntoConstraints="NO" id="SY4-My-c7M">
+                        <rect key="frame" x="270" y="68" width="40" height="40"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="j2o-YT-GBY" firstAttribute="top" secondItem="Anb-Lw-jKh" secondAttribute="top" id="AyP-aI-OZR"/>
+                    <constraint firstItem="oxX-Xb-i63" firstAttribute="leading" secondItem="Anb-Lw-jKh" secondAttribute="leading" id="D9L-Ge-EzR"/>
+                    <constraint firstAttribute="trailing" secondItem="oxX-Xb-i63" secondAttribute="trailing" id="G97-m1-ruV"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="SY4-My-c7M" secondAttribute="trailing" constant="2" id="Nrh-eK-eoW"/>
+                    <constraint firstItem="jhq-eN-6pf" firstAttribute="top" secondItem="Anb-Lw-jKh" secondAttribute="top" constant="20" id="NtI-hy-IXY"/>
+                    <constraint firstItem="9xP-5N-yeX" firstAttribute="top" secondItem="jhq-eN-6pf" secondAttribute="bottom" constant="2" id="O7h-Bs-XI6"/>
+                    <constraint firstItem="9xP-5N-yeX" firstAttribute="leading" secondItem="Anb-Lw-jKh" secondAttribute="leading" constant="23" id="Odg-0O-2Sh"/>
+                    <constraint firstAttribute="bottom" secondItem="oxX-Xb-i63" secondAttribute="bottom" id="TUy-yN-cYB"/>
+                    <constraint firstItem="jhq-eN-6pf" firstAttribute="leading" secondItem="Anb-Lw-jKh" secondAttribute="leading" constant="20" id="Tff-uh-0SV"/>
+                    <constraint firstAttribute="bottom" secondItem="j2o-YT-GBY" secondAttribute="bottom" id="Zd3-aU-jbF"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jhq-eN-6pf" secondAttribute="trailing" constant="20" id="ZxB-by-N7w"/>
+                    <constraint firstItem="XS6-0i-s5u" firstAttribute="leading" secondItem="Anb-Lw-jKh" secondAttribute="leading" constant="20" id="cv0-l3-W8z"/>
+                    <constraint firstItem="j2o-YT-GBY" firstAttribute="leading" secondItem="Anb-Lw-jKh" secondAttribute="leading" id="jHN-H4-79Q"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="XS6-0i-s5u" secondAttribute="bottom" constant="5" id="t38-OF-D3j"/>
+                    <constraint firstItem="oxX-Xb-i63" firstAttribute="top" secondItem="Anb-Lw-jKh" secondAttribute="top" id="tDz-I7-wJ7"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="SY4-My-c7M" secondAttribute="bottom" constant="27" id="tGO-TM-lqt"/>
+                    <constraint firstAttribute="trailing" secondItem="j2o-YT-GBY" secondAttribute="trailing" id="uEw-TC-g3X"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="acceptedImageView" destination="SY4-My-c7M" id="bIG-Bv-HSM"/>
+                <outlet property="backButton" destination="oxX-Xb-i63" id="eBM-G3-Dpi"/>
+                <outlet property="challengeImageView" destination="j2o-YT-GBY" id="7Lk-rq-D4d"/>
+                <outlet property="challengeLabel" destination="jhq-eN-6pf" id="2eq-IG-Rz2"/>
+                <outlet property="focusLabel" destination="9xP-5N-yeX" id="eH6-GT-lHr"/>
+                <outlet property="pointLabel" destination="XS6-0i-s5u" id="49l-3S-Eg2"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ico_accepted_challenge.png" width="40" height="40"/>
+        <image name="ico_back_challenge_diet_lv1.png" width="320" height="144"/>
+    </resources>
+</document>
