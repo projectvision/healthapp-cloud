@@ -73,7 +73,7 @@ CGFloat NavbarHeight = 54;
                                CGRectMake(0, 0, ScreenWidth, NavbarHeight)];
     navbar.backgroundColor = [UIColor whiteColor];
     UINavigationItem *navItem = [[UINavigationItem alloc] init];
-    navItem.title = @"Human API";
+    navItem.title = @"Connect Your Fitness Tracker";
     UIBarButtonItem * doneButton = [[UIBarButtonItem alloc]
                                     initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
                                     target:self
