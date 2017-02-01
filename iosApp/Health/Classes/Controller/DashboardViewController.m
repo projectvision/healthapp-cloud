@@ -647,9 +647,9 @@ static CGFloat const kHeaderHeight = 30.0f;
 {
     NSDate *now = [NSDate date];
     NSDate *tomorrow = [now oneDayNext];
-    NSDate *jobDate = [NSDate dateFromYear:[tomorrow year] month:[tomorrow monthOfYear] day:[tomorrow dayOfMonth] hour:00 minute:00];
+    NSDate *jobDate = [NSDate dateFromYear:[tomorrow year] month:[tomorrow monthOfYear] day:[tomorrow dayOfMonth] hour:8 minute:00];
 
-    NSTimeZone *tz = [NSTimeZone defaultTimeZone];
+    NSTimeZone *tz = [NSTimeZone systemTimeZone];
     NSInteger seconds = [tz secondsFromGMTForDate: jobDate];
     NSDate *timeZoneDate = [NSDate dateWithTimeInterval: seconds sinceDate: jobDate];
 
@@ -664,7 +664,7 @@ static CGFloat const kHeaderHeight = 30.0f;
     NSString *result = @"0";
     double percentnumber = [progress doubleValue];
     if (progress) {
-        result = [NSString stringWithFormat:@"%.02f",percentnumber];
+        result = [NSString stringWithFormat:@"%.0f",percentnumber];
     }
 
     return result;
