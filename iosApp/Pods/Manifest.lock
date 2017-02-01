@@ -1,0 +1,64 @@
+PODS:
+  - AFNetworking (3.0.4):
+    - AFNetworking/NSURLSession (= 3.0.4)
+    - AFNetworking/Reachability (= 3.0.4)
+    - AFNetworking/Security (= 3.0.4)
+    - AFNetworking/Serialization (= 3.0.4)
+    - AFNetworking/UIKit (= 3.0.4)
+  - AFNetworking/NSURLSession (3.0.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.0.4)
+  - AFNetworking/Security (3.0.4)
+  - AFNetworking/Serialization (3.0.4)
+  - AFNetworking/UIKit (3.0.4):
+    - AFNetworking/NSURLSession
+  - Bolts (1.6.0):
+    - Bolts/AppLinks (= 1.6.0)
+    - Bolts/Tasks (= 1.6.0)
+  - Bolts/AppLinks (1.6.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.6.0)
+  - Crashlytics (3.8.3):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.11)
+  - Facebook-iOS-SDK (3.24.2):
+    - Bolts (~> 1.2)
+  - NXOAuth2Client (1.2.8)
+  - OAuth.io (1.2.1)
+  - Parse (1.12.0):
+    - Bolts/Tasks (~> 1.5)
+  - ParseCrashReporting (1.9.2):
+    - Bolts/Tasks (~> 1.5)
+    - Parse (~> 1.9)
+  - ParseFacebookUtils (1.10.0):
+    - Bolts/Tasks (~> 1.5)
+    - Facebook-iOS-SDK (~> 3.24)
+    - Parse (~> 1.9)
+
+DEPENDENCIES:
+  - AFNetworking
+  - Crashlytics
+  - Fabric
+  - NXOAuth2Client
+  - OAuth.io
+  - Parse
+  - ParseCrashReporting
+  - ParseFacebookUtils
+
+SPEC CHECKSUMS:
+  AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  Bolts: f52a250053bb517ca874523c3913776359ab3def
+  Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  Facebook-iOS-SDK: 2b76db4e29be113e211b464f7cc8c6a4b5a5a7d9
+  NXOAuth2Client: 98c4d4c594edd2b289cfc34a8928653e1dab7adf
+  OAuth.io: 15ea99dc3e4e2b477d753241eae9110fcbe3ff45
+  Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
+  ParseCrashReporting: 33b760facc649d4fd99eef8f35dcda6a406099e5
+  ParseFacebookUtils: 7030f53c989fda36ad50029d90edec1327424317
+
+PODFILE CHECKSUM: b254b14de6566f3a95c05c3286f7f08fba366015
+
+COCOAPODS: 1.1.1

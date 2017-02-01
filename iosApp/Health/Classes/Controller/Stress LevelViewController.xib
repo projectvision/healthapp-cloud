@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Stress_LevelViewController">
+            <connections>
+                <outlet property="_contentWidthConstraint" destination="VSw-K1-Rnq" id="ZjR-tV-0N6"/>
+                <outlet property="badgeButton" destination="NJ7-MT-G7H" id="8bX-Kh-9ym"/>
+                <outlet property="combo10Btn" destination="gR4-44-KRd" id="WJr-5D-VJB"/>
+                <outlet property="combo10Table" destination="BHr-Uu-6tW" id="hHf-69-zr1"/>
+                <outlet property="combo10Txt" destination="Ueu-pe-jPe" id="0nJ-rn-K38"/>
+                <outlet property="combo1Btn" destination="fZT-e0-D3q" id="vwO-Na-jGt"/>
+                <outlet property="combo1Table" destination="YPe-5o-rSi" id="Yf2-6d-F2n"/>
+                <outlet property="combo1Txt" destination="out-xN-am8" id="QmV-zZ-zGT"/>
+                <outlet property="combo2Btn" destination="7jU-Pz-89l" id="b9g-NL-VL8"/>
+                <outlet property="combo2Table" destination="Eg2-0S-mXW" id="I0l-cK-er7"/>
+                <outlet property="combo2Txt" destination="e8a-kL-atq" id="zHW-2h-WFK"/>
+                <outlet property="combo3Btn" destination="Cts-ot-pBq" id="sS9-2z-6pc"/>
+                <outlet property="combo3Table" destination="vvb-zt-5lp" id="RT5-Zz-Dzl"/>
+                <outlet property="combo3Txt" destination="KSI-vd-bga" id="sEu-iv-p5b"/>
+                <outlet property="combo4Btn" destination="w8V-gh-mL2" id="GET-ad-dHi"/>
+                <outlet property="combo4Table" destination="hME-FY-JQR" id="zAN-ci-9tz"/>
+                <outlet property="combo4Txt" destination="Eh8-dm-2Of" id="n14-yk-99n"/>
+                <outlet property="combo5Btn" destination="AIB-Qe-6bF" id="FRN-lN-cea"/>
+                <outlet property="combo5Table" destination="9Tg-jY-gPp" id="RNN-RT-E7t"/>
+                <outlet property="combo5Txt" destination="VEV-6R-TnI" id="0Ww-45-9eY"/>
+                <outlet property="combo6Btn" destination="b6u-DL-E1y" id="D6I-X7-ej2"/>
+                <outlet property="combo6Table" destination="rpr-tc-Lci" id="wEs-kO-VQj"/>
+                <outlet property="combo6Txt" destination="fAN-Cg-8ir" id="6cs-6f-VSd"/>
+                <outlet property="combo7Btn" destination="TXj-CT-nb6" id="h5d-UK-uYN"/>
+                <outlet property="combo7Table" destination="oMH-o5-ttX" id="PdX-Fw-bao"/>
+                <outlet property="combo7Txt" destination="tEE-dg-Qz3" id="mqu-jR-lXg"/>
+                <outlet property="combo8Btn" destination="98r-p0-ots" id="KKn-tB-C3Q"/>
+                <outlet property="combo8Table" destination="cIX-f8-wzx" id="Qs1-oB-E4V"/>
+                <outlet property="combo8Txt" destination="3cZ-NA-4f5" id="tra-Me-42a"/>
+                <outlet property="combo9Btn" destination="YBQ-nY-WU7" id="wXt-vs-hDH"/>
+                <outlet property="combo9Table" destination="TWy-Hk-Xvp" id="hYB-VC-O1a"/>
+                <outlet property="combo9Txt" destination="MSD-B4-GpG" id="sFl-af-9br"/>
+                <outlet property="saveButton" destination="Wv3-d1-IQW" id="ZES-mD-oM3"/>
+                <outlet property="scrollView" destination="awB-6v-eUK" id="f5U-mi-3IR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="1257"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8i-Um-U4p">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="qsv-xr-MOH"/>
+                    </constraints>
+                    <color key="barTintColor" red="0.30980392159999998" green="0.75686274509999996" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <textAttributes key="titleTextAttributes">
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem id="vYK-4D-rec">
+                            <view key="titleView" contentMode="scaleToFill" id="BJM-Bg-lty">
+                                <rect key="frame" x="35" y="2" width="250" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4. Stress Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rM-OL-XyF" userLabel="Label - Assessment">
+                                        <rect key="frame" x="52" y="10" width="120" height="21"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJ7-MT-G7H" userLabel="completion - 90%">
+                                        <rect key="frame" x="175" y="8" width="40" height="26"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="13"/>
+                                        <state key="normal" title="0%">
+                                            <color key="titleColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="awB-6v-eUK">
+                    <rect key="frame" x="0.0" y="46" width="320" height="1800"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1zM-R7-Kbu">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="1800"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10. In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mm-VT-hF1" userLabel="Label - 10. Skip breakfast?">
+                                    <rect key="frame" x="11" y="904" width="299" height="68"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="68" id="OR0-to-ELN"/>
+                                        <constraint firstAttribute="width" constant="299" id="vne-wm-KpR"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" background="blankText.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ueu-pe-jPe" userLabel="comboText10">
+                                    <rect key="frame" x="34" y="981" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="TOt-vR-sZg"/>
+                                        <constraint firstAttribute="width" constant="250" id="qjS-dg-4Z1"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR4-44-KRd" userLabel="Button-combo10">
+                                    <rect key="frame" x="254" y="981" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="szU-s1-UCQ"/>
+                                        <constraint firstAttribute="height" constant="30" id="xJl-Og-lSE"/>
+                                    </constraints>
+                                    <state key="normal" image="comboBtn.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="clickCombo10Btn:" destination="-1" eventType="touchUpInside" id="bmT-Gd-Y8p"/>
+                                    </connections>
+                                </button>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BHr-Uu-6tW" userLabel="combotable10" customClass="TableViewWithBlock">
+                                    <rect key="frame" x="34" y="1101" width="250" height="0.0"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </tableView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="9. In the last month, how often have you been angered because of things that were outside your control?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTx-dn-9s2" userLabel="Label - 9. Skip breakfast?">
+                                    <rect key="frame" x="11" y="802" width="299" height="56"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="6fT-oZ-y10"/>
+                                        <constraint firstAttribute="width" constant="299" id="fTF-Ij-jdL"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" background="blankText.png" translatesAutoresizingMaskIntoConstraints="NO" id="MSD-B4-GpG" userLabel="comboText9">
+                                    <rect key="frame" x="35" y="866" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="08Z-Al-pqD"/>
+                                        <constraint firstAttribute="width" constant="250" id="4Au-sJ-Lbw"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TWy-Hk-Xvp" userLabel="combotable9" customClass="TableViewWithBlock">
+                                    <rect key="frame" x="34" y="1101" width="250" height="0.0"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </tableView>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBQ-nY-WU7" userLabel="Button-combo9">
+                                    <rect key="frame" x="254" y="866" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="EIe-5M-uSM"/>
+                                        <constraint firstAttribute="height" constant="30" id="klv-A6-eXh"/>
+                                    </constraints>
+                                    <state key="normal" image="comboBtn.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="clickCombo9Btn:" destination="-1" eventType="touchUpInside" id="TcS-6p-uVf"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="8. In the last month, how often have you felt that you were on top of things?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h7-o0-8bS" userLabel="Label - 8. Skip breakfast?">
+                                    <rect key="frame" x="13" y="710" width="295" height="46"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="295" id="kkw-zK-XfC"/>
+                                        <constraint firstAttribute="height" constant="46" id="xY8-lh-5l6"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" background="blankText.png" translatesAutoresizingMaskIntoConstraints="NO" id="3cZ-NA-4f5" userLabel="comboText8">
+                                    <rect key="frame" x="35" y="764" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="250" id="kJe-lc-DkR"/>
+                                        <constraint firstAttribute="height" constant="30" id="xwD-Pd-Q48"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cIX-f8-wzx" userLabel="combotable8" customClass="TableViewWithBlock">
+                                    <rect key="frame" x="34" y="1101" width="250" height="0.0"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </tableView>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98r-p0-ots" userLabel="Button-combo8">
+                                    <rect key="frame" x="255" y="764" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="43X-vi-PfN"/>
+                                        <constraint firstAttribute="height" constant="30" id="Rng-9N-AW5"/>
+                                    </constraints>
+                                    <state key="normal" image="comboBtn.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="clickCombo8Btn:" destination="-1" eventType="touchUpInside" id="RbO-PO-xyl"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="7. In the last month, how often have you been able to control irritations in your life?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWE-qI-do2" userLabel="Label - 7. Skip breakfast?">
+                                    <rect key="frame" x="12" y="612" width="296" height="52"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="296" id="cy0-Vl-qhi"/>
+                                        <constraint firstAttribute="height" constant="52" id="yqq-Ap-Son"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" background="blankText.png" translatesAutoresizingMaskIntoConstraints="NO" id="tEE-dg-Qz3" userLabel="comboText7">
+                                    <rect key="frame" x="34" y="672" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="250" id="3Kj-j5-ui3"/>
+                                        <constraint firstAttribute="height" constant="30" id="JPr-eu-bCF"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXj-CT-nb6" userLabel="Button-combo7">
+                                    <rect key="frame" x="254" y="672" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="Pqy-Cw-B9G"/>
+                                        <constraint firstAttribute="height" constant="30" id="qCP-dN-AEX"/>
+                                    </constraints>
+                                    <state key="normal" image="comboBtn.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="clickCombo7Btn:" destination="-1" eventType="touchUpInside" id="TQk-As-8hY"/>
+                                    </connections>
+                                </button>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oMH-o5-ttX" userLabel="combotable7" customClass="TableViewWithBlock">
+                                    <rect key="frame" x="34" y="1101" width="250" height="0.0"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </tableView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="6. In the last month, how often have you found that you could not cope with all the things that you had to do?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpx-qM-ymP" userLabel="Label - 6. Skip breakfast?">
+                                    <rect key="frame" x="2" y="513" width="318" height="53"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="53" id="DPc-in-S2b"/>
+                                        <constraint firstAttribute="width" constant="318" id="agN-10-iz5"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" background="blankText.png" translatesAutoresizingMaskIntoConstraints="NO" id="fAN-Cg-8ir" userLabel="comboText6">
+                                    <rect key="frame" x="34" y="574" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="250" id="0UT-xl-aEN"/>
+                                        <constraint firstAttribute="height" constant="30" id="Ijs-Zj-8ZM"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6u-DL-E1y" userLabel="Button-combo6">
+                                    <rect key="frame" x="255" y="574" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="EjD-o0-d4u"/>
+                                        <constraint firstAttribute="height" constant="30" id="bc3-qc-xlb"/>
+                                    </constraints>
+                                    <state key="normal" image="comboBtn.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="clickCombo6Btn:" destination="-1" eventType="touchUpInside" id="0Ka-8k-e3n"/>
+                                    </connections>
+                                </button>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rpr-tc-Lci" userLabel="combotable6" customClass="TableViewWithBlock">
+                                    <rect key="frame" x="34" y="1101" width="250" height="0.0"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </tableView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="5. In the last month, how often have you felt that things were going your way?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlk-1k-nL3" userLabel="Label - 5. Skip breakfast?">
+                                    <rect key="frame" x="12" y="415" width="296" height="52"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="52" id="81Y-db-i3j"/>
+                                        <constraint firstAttribute="width" constant="296" id="F9p-F1-oRZ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" background="blankText.png" translatesAutoresizingMaskIntoConstraints="NO" id="VEV-6R-TnI" userLabel="comboText5">
+                                    <rect key="frame" x="35" y="475" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="MA7-RM-upS"/>
+                                        <constraint firstAttribute="width" constant="250" id="a6T-s7-nuM"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIB-Qe-6bF" userLabel="Button-combo5">
+                                    <rect key="frame" x="255" y="475" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="rYy-iY-eU2"/>
+                                        <constraint firstAttribute="width" constant="30" id="z46-yp-d6I"/>
+                                    </constraints>
+                                    <state key="normal" image="comboBtn.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="clickCombo5Btn:" destination="-1" eventType="touchUpInside" id="ZbD-h0-7Pz"/>
+                                    </connections>
+                                </button>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9Tg-jY-gPp" userLabel="combotable5" customClass="TableViewWithBlock">
+                                    <rect key="frame" x="34" y="1101" width="250" height="0.0"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </tableView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4. In the last month, how often have you felt confident about your ability to handle your personal problems" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRu-Lg-QEK" userLabel="Label - 4. Skip breakfast?">
+                                    <rect key="frame" x="12" y="317" width="296" height="52"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="296" id="OHa-ci-5W3"/>
+                                        <constraint firstAttribute="height" constant="52" id="ehs-En-GHo"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" background="blankText.png" translatesAutoresizingMaskIntoConstraints="NO" id="Eh8-dm-2Of" userLabel="comboText4">
+                                    <rect key="frame" x="35" y="377" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="iBs-pn-SdL"/>
+                                        <constraint firstAttribute="width" constant="250" id="nct-aU-QYQ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8V-gh-mL2" userLabel="Button-combo4">
+                                    <rect key="frame" x="255" y="377" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="2If-nb-ySV"/>
+                                        <constraint firstAttribute="height" constant="30" id="6Qa-nx-hlR"/>
+                                    </constraints>
+                                    <state key="normal" image="comboBtn.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="clickCombo4Btn:" destination="-1" eventType="touchUpInside" id="HAT-ym-9Mo"/>
+                                    </connections>
+                                </button>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hME-FY-JQR" userLabel="combotable4" customClass="TableViewWithBlock">
+                                    <rect key="frame" x="34" y="1101" width="250" height="0.0"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </tableView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3. In the last month, how often have you felt nervous and “stressed”?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rku-cg-H7g" userLabel="Label - 3. Skip breakfast?">
+                                    <rect key="frame" x="12" y="219" width="296" height="52"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="296" id="eGp-fi-LaC"/>
+                                        <constraint firstAttribute="height" constant="52" id="grk-Xv-wOr"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" background="blankText.png" translatesAutoresizingMaskIntoConstraints="NO" id="KSI-vd-bga" userLabel="comboText3">
+                                    <rect key="frame" x="35" y="279" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="5l4-V5-0x1"/>
+                                        <constraint firstAttribute="width" constant="250" id="s4F-r4-Y02"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cts-ot-pBq" userLabel="Button-combo3">
+                                    <rect key="frame" x="255" y="279" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="LLZ-5V-KiJ"/>
+                                        <constraint firstAttribute="width" constant="30" id="v6o-NU-P2a"/>
+                                    </constraints>
+                                    <state key="normal" image="comboBtn.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="clickCombo3Btn:" destination="-1" eventType="touchUpInside" id="Jw3-AP-qoA"/>
+                                    </connections>
+                                </button>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vvb-zt-5lp" userLabel="combotable3" customClass="TableViewWithBlock">
+                                    <rect key="frame" x="34" y="1101" width="250" height="0.0"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </tableView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2. In the last month, how often have you felt that you were unable to control the important things in your life?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mti-GL-1Tx" userLabel="Label - 2. Skip breakfast?">
+                                    <rect key="frame" x="12" y="111" width="296" height="62"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="62" id="F8r-ja-sni"/>
+                                        <constraint firstAttribute="width" constant="296" id="Y4T-qE-zDo"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" background="blankText.png" translatesAutoresizingMaskIntoConstraints="NO" id="e8a-kL-atq" userLabel="comboText2">
+                                    <rect key="frame" x="35" y="181" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="250" id="AGv-6d-9My"/>
+                                        <constraint firstAttribute="height" constant="30" id="kwz-9U-JhP"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jU-Pz-89l" userLabel="Button-combo2">
+                                    <rect key="frame" x="255" y="181" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="RNJ-sh-ORD"/>
+                                        <constraint firstAttribute="width" constant="30" id="sDr-6a-XEd"/>
+                                    </constraints>
+                                    <state key="normal" image="comboBtn.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="clickCombo2Btn:" destination="-1" eventType="touchUpInside" id="Cb0-x5-cRO"/>
+                                    </connections>
+                                </button>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Eg2-0S-mXW" userLabel="combotable2" customClass="TableViewWithBlock">
+                                    <rect key="frame" x="62" y="1083" width="250" height="0.0"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </tableView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1.In the last month, how often have you been upset because of something that happened unexpectedly?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLd-j8-dpB">
+                                    <rect key="frame" x="7" y="-11" width="306" height="76"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="306" id="ozg-pg-f9i"/>
+                                        <constraint firstAttribute="height" constant="76" id="rfH-sC-hDd"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" background="blankText.png" translatesAutoresizingMaskIntoConstraints="NO" id="out-xN-am8" userLabel="comboText1">
+                                    <rect key="frame" x="35" y="73" width="250" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="P7Y-hH-EBa"/>
+                                        <constraint firstAttribute="width" constant="250" id="QvY-3m-OxJ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZT-e0-D3q" userLabel="Button-combo1">
+                                    <rect key="frame" x="255" y="73" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="bEz-JB-weG"/>
+                                        <constraint firstAttribute="height" constant="30" id="rUU-QM-gQ8"/>
+                                    </constraints>
+                                    <state key="normal" image="comboBtn.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="clickCombo1Btn:" destination="-1" eventType="touchUpInside" id="0tv-7s-fJ6"/>
+                                    </connections>
+                                </button>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="YPe-5o-rSi" userLabel="combotable1" customClass="TableViewWithBlock">
+                                    <rect key="frame" x="16" y="1068" width="250" height="0.0"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="rku-cg-H7g" firstAttribute="top" secondItem="e8a-kL-atq" secondAttribute="bottom" constant="8" id="0lt-l8-29X"/>
+                                <constraint firstAttribute="centerX" secondItem="jlk-1k-nL3" secondAttribute="centerX" id="0tp-PT-hrg"/>
+                                <constraint firstItem="YPe-5o-rSi" firstAttribute="top" secondItem="out-xN-am8" secondAttribute="bottom" id="19b-1b-E3x"/>
+                                <constraint firstItem="VEV-6R-TnI" firstAttribute="bottom" secondItem="AIB-Qe-6bF" secondAttribute="bottom" id="1fR-YY-DsN"/>
+                                <constraint firstItem="cIX-f8-wzx" firstAttribute="top" secondItem="3cZ-NA-4f5" secondAttribute="bottom" id="26L-ls-N4b"/>
+                                <constraint firstAttribute="centerX" secondItem="out-xN-am8" secondAttribute="centerX" id="2AC-AG-lsd"/>
+                                <constraint firstItem="vvb-zt-5lp" firstAttribute="leading" secondItem="KSI-vd-bga" secondAttribute="leading" id="30j-Mx-kQx"/>
+                                <constraint firstItem="9Tg-jY-gPp" firstAttribute="leading" secondItem="VEV-6R-TnI" secondAttribute="leading" id="36K-Zu-Q5q"/>
+                                <constraint firstAttribute="bottom" secondItem="Ueu-pe-jPe" secondAttribute="bottom" constant="150" id="43v-XT-Ta2"/>
+                                <constraint firstAttribute="centerX" secondItem="fAN-Cg-8ir" secondAttribute="centerX" id="5nF-a0-v9P"/>
+                                <constraint firstItem="Eh8-dm-2Of" firstAttribute="trailing" secondItem="hME-FY-JQR" secondAttribute="trailing" id="6r5-oh-zjI"/>
+                                <constraint firstAttribute="centerX" secondItem="Ueu-pe-jPe" secondAttribute="centerX" id="91F-9g-He4"/>
+                                <constraint firstItem="MSD-B4-GpG" firstAttribute="trailing" secondItem="YBQ-nY-WU7" secondAttribute="trailing" constant="1" id="98y-8I-cYb"/>
+                                <constraint firstItem="Eh8-dm-2Of" firstAttribute="leading" secondItem="hME-FY-JQR" secondAttribute="leading" id="9Cn-xR-epi"/>
+                                <constraint firstItem="VEV-6R-TnI" firstAttribute="top" secondItem="AIB-Qe-6bF" secondAttribute="top" id="9in-Hv-63K"/>
+                                <constraint firstItem="Eg2-0S-mXW" firstAttribute="leading" secondItem="e8a-kL-atq" secondAttribute="leading" id="DEO-98-BTk"/>
+                                <constraint firstItem="Cts-ot-pBq" firstAttribute="top" secondItem="KSI-vd-bga" secondAttribute="top" id="DK9-bI-Kjd"/>
+                                <constraint firstAttribute="centerX" secondItem="tEE-dg-Qz3" secondAttribute="centerX" id="Dq3-NZ-jks"/>
+                                <constraint firstItem="MSD-B4-GpG" firstAttribute="trailing" secondItem="TWy-Hk-Xvp" secondAttribute="trailing" id="FGK-zx-bbV"/>
+                                <constraint firstItem="MSD-B4-GpG" firstAttribute="bottom" secondItem="YBQ-nY-WU7" secondAttribute="bottom" id="FIf-Cx-DN1"/>
+                                <constraint firstItem="Mti-GL-1Tx" firstAttribute="top" secondItem="out-xN-am8" secondAttribute="bottom" constant="8" id="GJI-Aj-FTg"/>
+                                <constraint firstItem="MSD-B4-GpG" firstAttribute="top" secondItem="XTx-dn-9s2" secondAttribute="bottom" constant="8" id="GQD-39-qqk"/>
+                                <constraint firstItem="oMH-o5-ttX" firstAttribute="top" secondItem="tEE-dg-Qz3" secondAttribute="bottom" id="GiP-TQ-HwG"/>
+                                <constraint firstItem="b6u-DL-E1y" firstAttribute="trailing" secondItem="fAN-Cg-8ir" secondAttribute="trailing" constant="1" id="Gim-mm-6Lx"/>
+                                <constraint firstItem="3cZ-NA-4f5" firstAttribute="top" secondItem="1h7-o0-8bS" secondAttribute="bottom" constant="8" id="Gzh-s3-5sa"/>
+                                <constraint firstAttribute="centerX" secondItem="VEV-6R-TnI" secondAttribute="centerX" id="InP-mI-wst"/>
+                                <constraint firstItem="BHr-Uu-6tW" firstAttribute="top" secondItem="Ueu-pe-jPe" secondAttribute="bottom" id="IyY-BT-kVF"/>
+                                <constraint firstAttribute="centerX" secondItem="MSD-B4-GpG" secondAttribute="centerX" id="Kj5-Ub-xOq"/>
+                                <constraint firstItem="vvb-zt-5lp" firstAttribute="top" secondItem="KSI-vd-bga" secondAttribute="bottom" id="Kzi-1u-BEt"/>
+                                <constraint firstAttribute="centerX" secondItem="XTx-dn-9s2" secondAttribute="centerX" id="LOr-rE-fq7"/>
+                                <constraint firstItem="98r-p0-ots" firstAttribute="trailing" secondItem="3cZ-NA-4f5" secondAttribute="trailing" id="LdQ-Hn-OYc"/>
+                                <constraint firstItem="rpr-tc-Lci" firstAttribute="top" secondItem="fAN-Cg-8ir" secondAttribute="bottom" id="Mky-Df-HYT"/>
+                                <constraint firstAttribute="centerX" secondItem="1h7-o0-8bS" secondAttribute="centerX" id="Mmw-b4-Nnp"/>
+                                <constraint firstAttribute="centerX" secondItem="e8a-kL-atq" secondAttribute="centerX" id="NGS-nY-ZeW"/>
+                                <constraint firstItem="cIX-f8-wzx" firstAttribute="leading" secondItem="3cZ-NA-4f5" secondAttribute="leading" id="NSX-yc-2dH"/>
+                                <constraint firstAttribute="centerX" secondItem="Eh8-dm-2Of" secondAttribute="centerX" id="Nto-AZ-FA2"/>
+                                <constraint firstItem="gR4-44-KRd" firstAttribute="bottom" secondItem="Ueu-pe-jPe" secondAttribute="bottom" id="Nwh-no-9R1"/>
+                                <constraint firstItem="Cts-ot-pBq" firstAttribute="trailing" secondItem="KSI-vd-bga" secondAttribute="trailing" id="OBn-qT-tsh"/>
+                                <constraint firstItem="rpr-tc-Lci" firstAttribute="trailing" secondItem="fAN-Cg-8ir" secondAttribute="trailing" id="OJJ-5e-JUa"/>
+                                <constraint firstItem="BHr-Uu-6tW" firstAttribute="trailing" secondItem="Ueu-pe-jPe" secondAttribute="trailing" id="On9-uF-dyA"/>
+                                <constraint firstItem="PRu-Lg-QEK" firstAttribute="top" secondItem="KSI-vd-bga" secondAttribute="bottom" constant="8" id="Pgv-Jv-ThO"/>
+                                <constraint firstItem="YPe-5o-rSi" firstAttribute="leading" secondItem="out-xN-am8" secondAttribute="leading" id="Q0O-Yk-Ffj"/>
+                                <constraint firstAttribute="centerX" secondItem="KSI-vd-bga" secondAttribute="centerX" id="QYA-w2-fx2"/>
+                                <constraint firstItem="9Tg-jY-gPp" firstAttribute="trailing" secondItem="VEV-6R-TnI" secondAttribute="trailing" id="RYR-PU-fWU"/>
+                                <constraint firstItem="TXj-CT-nb6" firstAttribute="top" secondItem="tEE-dg-Qz3" secondAttribute="top" id="S0b-Fm-4KS"/>
+                                <constraint firstItem="jlk-1k-nL3" firstAttribute="top" secondItem="Eh8-dm-2Of" secondAttribute="bottom" constant="8" id="SQ0-3K-eJt"/>
+                                <constraint firstItem="9mm-VT-hF1" firstAttribute="top" secondItem="MSD-B4-GpG" secondAttribute="bottom" constant="8" id="TkZ-KX-HDg"/>
+                                <constraint firstItem="Eg2-0S-mXW" firstAttribute="top" secondItem="e8a-kL-atq" secondAttribute="bottom" id="TsI-4r-UCb"/>
+                                <constraint firstItem="Eh8-dm-2Of" firstAttribute="trailing" secondItem="w8V-gh-mL2" secondAttribute="trailing" id="UBZ-BR-uJ0"/>
+                                <constraint firstAttribute="centerX" secondItem="tWE-qI-do2" secondAttribute="centerX" id="VDd-hE-ieC"/>
+                                <constraint firstAttribute="width" constant="320" id="VSw-K1-Rnq"/>
+                                <constraint firstAttribute="centerX" secondItem="tpx-qM-ymP" secondAttribute="centerX" id="VXN-DF-C2m"/>
+                                <constraint firstAttribute="centerX" secondItem="9mm-VT-hF1" secondAttribute="centerX" id="W3V-lw-oyQ"/>
+                                <constraint firstItem="tWE-qI-do2" firstAttribute="top" secondItem="fAN-Cg-8ir" secondAttribute="bottom" constant="8" id="WGM-Aq-2Mf"/>
+                                <constraint firstItem="98r-p0-ots" firstAttribute="top" secondItem="3cZ-NA-4f5" secondAttribute="top" id="WXJ-ra-TzF"/>
+                                <constraint firstItem="out-xN-am8" firstAttribute="top" secondItem="vLd-j8-dpB" secondAttribute="bottom" constant="8" id="Y32-cu-jzT"/>
+                                <constraint firstItem="tEE-dg-Qz3" firstAttribute="top" secondItem="tWE-qI-do2" secondAttribute="bottom" constant="8" id="YJN-X1-XHL"/>
+                                <constraint firstItem="KSI-vd-bga" firstAttribute="top" secondItem="rku-cg-H7g" secondAttribute="bottom" constant="8" id="YgZ-JK-7hG"/>
+                                <constraint firstItem="YPe-5o-rSi" firstAttribute="trailing" secondItem="out-xN-am8" secondAttribute="trailing" id="YjR-eM-2PG"/>
+                                <constraint firstItem="1h7-o0-8bS" firstAttribute="top" secondItem="tEE-dg-Qz3" secondAttribute="bottom" constant="8" id="Yog-DE-nFf"/>
+                                <constraint firstItem="tEE-dg-Qz3" firstAttribute="leading" secondItem="oMH-o5-ttX" secondAttribute="leading" id="ZIh-lk-hc3"/>
+                                <constraint firstAttribute="centerX" secondItem="rku-cg-H7g" secondAttribute="centerX" id="ZXa-eY-Uvp"/>
+                                <constraint firstAttribute="centerX" secondItem="Mti-GL-1Tx" secondAttribute="centerX" id="aHF-QO-FfR"/>
+                                <constraint firstItem="XTx-dn-9s2" firstAttribute="top" secondItem="3cZ-NA-4f5" secondAttribute="bottom" constant="8" id="aLX-wM-wFq"/>
+                                <constraint firstItem="Cts-ot-pBq" firstAttribute="bottom" secondItem="KSI-vd-bga" secondAttribute="bottom" id="aYI-SV-0NK"/>
+                                <constraint firstItem="MSD-B4-GpG" firstAttribute="leading" secondItem="TWy-Hk-Xvp" secondAttribute="leading" id="ay2-sc-UoR"/>
+                                <constraint firstItem="Eh8-dm-2Of" firstAttribute="top" secondItem="PRu-Lg-QEK" secondAttribute="bottom" constant="8" id="bLg-3N-R7w"/>
+                                <constraint firstItem="Eh8-dm-2Of" firstAttribute="bottom" secondItem="w8V-gh-mL2" secondAttribute="bottom" id="bRP-XG-czR"/>
+                                <constraint firstItem="fAN-Cg-8ir" firstAttribute="top" secondItem="tpx-qM-ymP" secondAttribute="bottom" constant="8" id="cSM-r8-EB2"/>
+                                <constraint firstItem="b6u-DL-E1y" firstAttribute="bottom" secondItem="fAN-Cg-8ir" secondAttribute="bottom" id="d2Y-zR-eaA"/>
+                                <constraint firstItem="gR4-44-KRd" firstAttribute="top" secondItem="Ueu-pe-jPe" secondAttribute="top" id="fGO-lh-bcQ"/>
+                                <constraint firstItem="rpr-tc-Lci" firstAttribute="leading" secondItem="fAN-Cg-8ir" secondAttribute="leading" id="fyJ-XN-pRJ"/>
+                                <constraint firstAttribute="centerX" secondItem="PRu-Lg-QEK" secondAttribute="centerX" id="gaZ-Wx-c93"/>
+                                <constraint firstItem="tpx-qM-ymP" firstAttribute="top" secondItem="VEV-6R-TnI" secondAttribute="bottom" constant="8" id="gah-De-KMR"/>
+                                <constraint firstItem="TXj-CT-nb6" firstAttribute="trailing" secondItem="tEE-dg-Qz3" secondAttribute="trailing" id="grZ-Ig-IbT"/>
+                                <constraint firstItem="Eg2-0S-mXW" firstAttribute="trailing" secondItem="e8a-kL-atq" secondAttribute="trailing" id="guB-dB-ep7"/>
+                                <constraint firstItem="tEE-dg-Qz3" firstAttribute="trailing" secondItem="oMH-o5-ttX" secondAttribute="trailing" id="ha8-xX-cgb"/>
+                                <constraint firstItem="9Tg-jY-gPp" firstAttribute="top" secondItem="VEV-6R-TnI" secondAttribute="bottom" id="i3W-nI-Y4F"/>
+                                <constraint firstItem="cIX-f8-wzx" firstAttribute="trailing" secondItem="3cZ-NA-4f5" secondAttribute="trailing" id="igx-Ws-fu0"/>
+                                <constraint firstItem="TWy-Hk-Xvp" firstAttribute="top" secondItem="MSD-B4-GpG" secondAttribute="bottom" id="j5k-q9-wfB"/>
+                                <constraint firstItem="Eh8-dm-2Of" firstAttribute="top" secondItem="w8V-gh-mL2" secondAttribute="top" id="kmQ-Bh-B1S"/>
+                                <constraint firstItem="out-xN-am8" firstAttribute="top" secondItem="fZT-e0-D3q" secondAttribute="top" id="koR-fd-aG4"/>
+                                <constraint firstItem="e8a-kL-atq" firstAttribute="trailing" secondItem="7jU-Pz-89l" secondAttribute="trailing" id="kvW-AJ-3qU"/>
+                                <constraint firstItem="VEV-6R-TnI" firstAttribute="trailing" secondItem="AIB-Qe-6bF" secondAttribute="trailing" id="ml2-Pf-RUs"/>
+                                <constraint firstItem="out-xN-am8" firstAttribute="bottom" secondItem="fZT-e0-D3q" secondAttribute="bottom" id="mlM-fq-YZ7"/>
+                                <constraint firstItem="TXj-CT-nb6" firstAttribute="bottom" secondItem="tEE-dg-Qz3" secondAttribute="bottom" id="nTd-cg-hrN"/>
+                                <constraint firstItem="gR4-44-KRd" firstAttribute="trailing" secondItem="Ueu-pe-jPe" secondAttribute="trailing" id="o8W-ct-Sei"/>
+                                <constraint firstItem="hME-FY-JQR" firstAttribute="top" secondItem="Eh8-dm-2Of" secondAttribute="bottom" id="oIY-zn-rgT"/>
+                                <constraint firstItem="VEV-6R-TnI" firstAttribute="top" secondItem="jlk-1k-nL3" secondAttribute="bottom" constant="8" id="ohp-Iu-ysU"/>
+                                <constraint firstItem="e8a-kL-atq" firstAttribute="top" secondItem="Mti-GL-1Tx" secondAttribute="bottom" constant="8" id="p19-Yn-pCT"/>
+                                <constraint firstAttribute="centerX" secondItem="3cZ-NA-4f5" secondAttribute="centerX" id="qPo-fM-FBK"/>
+                                <constraint firstItem="vvb-zt-5lp" firstAttribute="trailing" secondItem="KSI-vd-bga" secondAttribute="trailing" id="s3t-S6-6T3"/>
+                                <constraint firstItem="e8a-kL-atq" firstAttribute="top" secondItem="7jU-Pz-89l" secondAttribute="top" id="s7U-19-0U1"/>
+                                <constraint firstItem="e8a-kL-atq" firstAttribute="bottom" secondItem="7jU-Pz-89l" secondAttribute="bottom" id="t2N-At-1BL"/>
+                                <constraint firstAttribute="centerX" secondItem="vLd-j8-dpB" secondAttribute="centerX" id="t2l-6N-WdD"/>
+                                <constraint firstItem="MSD-B4-GpG" firstAttribute="top" secondItem="YBQ-nY-WU7" secondAttribute="top" id="tXF-Yj-P8a"/>
+                                <constraint firstItem="98r-p0-ots" firstAttribute="bottom" secondItem="3cZ-NA-4f5" secondAttribute="bottom" id="tgH-jV-IEg"/>
+                                <constraint firstItem="BHr-Uu-6tW" firstAttribute="leading" secondItem="Ueu-pe-jPe" secondAttribute="leading" id="vk2-nj-hF5"/>
+                                <constraint firstItem="vLd-j8-dpB" firstAttribute="top" secondItem="1zM-R7-Kbu" secondAttribute="top" id="xds-do-LSz"/>
+                                <constraint firstItem="Ueu-pe-jPe" firstAttribute="top" secondItem="9mm-VT-hF1" secondAttribute="bottom" constant="9" id="yGo-IR-7am"/>
+                                <constraint firstItem="b6u-DL-E1y" firstAttribute="top" secondItem="fAN-Cg-8ir" secondAttribute="top" id="yYP-9X-B2E"/>
+                                <constraint firstItem="out-xN-am8" firstAttribute="trailing" secondItem="fZT-e0-D3q" secondAttribute="trailing" id="yYe-c7-wiv"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="1zM-R7-Kbu" firstAttribute="leading" secondItem="awB-6v-eUK" secondAttribute="leading" id="6HY-kg-D5U"/>
+                        <constraint firstAttribute="bottom" secondItem="1zM-R7-Kbu" secondAttribute="bottom" id="eNi-TJ-T9o"/>
+                        <constraint firstAttribute="trailing" secondItem="1zM-R7-Kbu" secondAttribute="trailing" id="hHF-ee-zz7"/>
+                        <constraint firstItem="1zM-R7-Kbu" firstAttribute="top" secondItem="awB-6v-eUK" secondAttribute="top" id="w2R-mC-RFe"/>
+                    </constraints>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wv3-d1-IQW" customClass="FUIButton">
+                    <rect key="frame" x="250" y="1212" width="60" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="4SQ-EG-7Ta"/>
+                        <constraint firstAttribute="width" constant="60" id="qpw-AY-Bsw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="12"/>
+                    <state key="normal" title="SAVE">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="clickedSaveBtn:" destination="-1" eventType="touchUpInside" id="NjC-rC-bMv"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GO4-Yn-B3t">
+                    <rect key="frame" x="10" y="1212" width="30" height="30"/>
+                    <state key="normal" title="Test">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="testButtonTapped:" destination="-1" eventType="touchUpInside" id="BIA-ER-6NX"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="GO4-Yn-B3t" secondAttribute="bottom" constant="15" id="Jus-e5-seV"/>
+                <constraint firstAttribute="trailing" secondItem="D8i-Um-U4p" secondAttribute="trailing" id="R4v-ne-rIv"/>
+                <constraint firstAttribute="trailing" secondItem="Wv3-d1-IQW" secondAttribute="trailing" constant="10" id="UVo-cl-tjM"/>
+                <constraint firstAttribute="bottom" secondItem="awB-6v-eUK" secondAttribute="bottom" id="ai3-ya-koO"/>
+                <constraint firstItem="GO4-Yn-B3t" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="dNM-c2-7xf"/>
+                <constraint firstItem="awB-6v-eUK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eGw-UC-db2"/>
+                <constraint firstAttribute="bottom" secondItem="Wv3-d1-IQW" secondAttribute="bottom" constant="20" id="fbw-MB-KWT"/>
+                <constraint firstItem="D8i-Um-U4p" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="j93-Qs-PBd"/>
+                <constraint firstItem="awB-6v-eUK" firstAttribute="top" secondItem="D8i-Um-U4p" secondAttribute="bottom" id="lGc-vW-Z4z"/>
+                <constraint firstAttribute="trailing" secondItem="awB-6v-eUK" secondAttribute="trailing" id="sZS-m5-C5j"/>
+                <constraint firstItem="D8i-Um-U4p" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zIs-FX-pbe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="405" y="521.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="blankText.png" width="534" height="98"/>
+        <image name="comboBtn.png" width="128" height="128"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
