@@ -470,9 +470,24 @@ static CGFloat const kHeaderHeight = 30.0f;
                 else
                 {
                     NSMutableString *dist=[[self.dashboardData valueForKey:@"distance"] stringValue];
+                    
+                    NSInteger distanceInInteger = [dist integerValue];
+                    NSString *units;
+                    if (distanceInInteger > 5280) {
+                        
+                        units = @"miles";
+                    }
+                    else
+                    {
+                        units = @"feet";
+                    }
                     if(dist.length>6)
                         dist=[dist substringToIndex:6];
-                    [summaryCell setSummaryCell:@"Distance Travelled:" :dist];
+                    
+                    
+                    dist = [dist stringByAppendingString:[NSString stringWithFormat:@" %@",units]];
+                    [summaryCell setSummaryCell:@"Distance:" :dist];
+
                 }
             }
             else
