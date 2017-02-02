@@ -298,7 +298,7 @@ static CGFloat const kHeaderHeight = 30.0f;
         //healthrisk
         case 3:
         {
-            label.text = @"How Healthy Am I?:";
+            label.text = @"Your Health Risk Based on Body Makeup:";
             break;
         }
             
@@ -334,7 +334,7 @@ static CGFloat const kHeaderHeight = 30.0f;
     else if (indexPath.section == 1)
     {
         UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@""
-                                                             message:@"Activity data is periodically updated by HealthKit "
+                                                             message:@"Activity data will be periodically updated by HealthKit "
                                                             delegate:nil cancelButtonTitle:@"Thanks!"                 otherButtonTitles:nil, nil
                                    ];
         alertView.tag = 2;
