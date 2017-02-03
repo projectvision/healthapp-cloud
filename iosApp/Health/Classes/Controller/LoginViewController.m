@@ -149,14 +149,14 @@
     if(![Utility isValidEmailAddress:email])
         
     {
-        UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:@"Error" message:@"Please enter  email in valid format" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+        UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:@"Error" message:@"Please enter  email in valid format" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alertview show];
        return;
     }
     else if(![Utility isValidPassword:password])
         
     {
-        UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:@"Error" message:@"Please enter password in valid format.Password should contain Atleast One Upper case,Lower case, Number and special symbol.Range should be 8-16 characters.EX: Abcd@123" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+        UIAlertView *alertview=[[UIAlertView alloc]initWithTitle:@"Error" message:@"Please enter password in valid format.Password should contain Atleast One Upper case,Lower case, Number and special symbol.Range should be 8-16 characters.EX: Abcd@123" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alertview show];
          return;
     }

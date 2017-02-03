@@ -368,9 +368,9 @@
 {
     float timeInterval;
     NSString *frequency = [[NSUserDefaults standardUserDefaults] objectForKey:@"Frequency"];
-    if([frequency isEqualToString:@"Once a Day"])
+    if([frequency isEqualToString:@"Every Minute"])
     {
-        timeInterval=24*60*60;
+        timeInterval=1*1*60;
         
     }
     else if([frequency isEqualToString:@"Twice a Day"])
@@ -381,9 +381,9 @@
     {
         timeInterval=1*60*60;
     }
-    else if([frequency isEqualToString:@"Every Minute"])
+    else if([frequency isEqualToString:@"Once a Day"])
     {
-        timeInterval=1*1*60;
+        timeInterval=24*60*60;
     }
     NSTimer *timer = nil;
     timer = [NSTimer scheduledTimerWithTimeInterval:timeInterval
