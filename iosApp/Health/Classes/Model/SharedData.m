@@ -504,7 +504,7 @@ static SharedData *g_sharedInfo = nil;
     NSDate *date = [NSDate dateFromYear:[[today oneDayNext] year] month:[[today oneDayNext] monthOfYear] day:[[today oneDayNext] dayOfMonth] hour:[fireDate hourOfDay] minute:[[fireDate oneMinuteNext] minuteOfHour]];
     
     localNotif.fireDate = date;
-    localNotif.timeZone = [NSTimeZone defaultTimeZone];
+    localNotif.timeZone = [NSTimeZone localTimeZone];
     localNotif.alertBody = @"It's time to accept new challenges. The old challenges will be expired.";
     localNotif.alertAction = @"View";
     localNotif.repeatInterval = NSCalendarUnitDay;

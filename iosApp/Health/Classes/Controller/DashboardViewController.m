@@ -501,12 +501,24 @@ static CGFloat const kHeaderHeight = 30.0f;
         //completion rate
         case 2:
         {
-            return [self tableView:tableView cellForChallengesCompletionRateAtIndexPath:indexPath];
+            
+            if (indexPath.row == 0)
+            {return [self tableView:tableView cellForChallengesCompletionRateAtIndexPath:indexPath];
+            }
+            else if (indexPath.row ==1)
+            {
+//                {return [self tableView:tableView cellForChallengesCompletionRateAtIndexPath:indexPath];
+//                }
+                
+            }
+        
         }
             
         //healthrisk
         case 3:
         {
+            SummaryCell *summaryCell = (SummaryCell *)[[[NSBundle mainBundle] loadNibNamed:@"SummaryCell" owner:self options:nil] objectAtIndex:0];
+            
             if (indexPath.row == 1)
             {
                 SummaryCell *summaryCell = (SummaryCell *)[[[NSBundle mainBundle] loadNibNamed:@"SummaryCell" owner:self options:nil] objectAtIndex:0];
