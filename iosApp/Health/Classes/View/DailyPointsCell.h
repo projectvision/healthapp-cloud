@@ -13,6 +13,6 @@
     IBOutlet UIProgressView     *progressView;
 }
 
--(void)setABSI:(CGFloat)absi;
+-(void)setABSI:(CGFloat)absi healthRisk:(NSString*)healthRisk;
 
 @end

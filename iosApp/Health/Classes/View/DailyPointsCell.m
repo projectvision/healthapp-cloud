@@ -22,7 +22,7 @@
     // Configure the view for the selected state
 }
 
--(void)setABSI:(CGFloat)absi
+-(void)setABSI:(CGFloat)absi healthRisk:(NSString*)healthRisk
 {
     absi = absi < -2.0f ? -2.0f : absi > 2.0f ? 2.0f : absi;
     
@@ -40,8 +40,24 @@
     {
         g = 64 * absi;
     }
-    
-    [progressView setProgressTintColor:[UIColor colorWithRed:(127 + r)/255 green:(127 + g)/255 blue:0.5f alpha:1]];
+    UIColor *color=[UIColor colorWithRed:(127 + r)/255 green:(127 + g)/255 blue:0.5f alpha:1];
+    if([healthRisk  isEqual: @"IMMEDIATE_ACTION"])
+    {
+        color=[UIColor redColor];
+    }
+    else if([healthRisk  isEqual: @"HIGH_RISK"])
+    {
+        color=[UIColor orangeColor];
+    }
+    else if([healthRisk  isEqual: @"LOW_RISK"])
+    {
+        color=[UIColor yellowColor];
+    }
+    else if([healthRisk  isEqual: @"VERY_LOW_RISK"])
+    {
+        color=[UIColor greenColor];
+    }
+    [progressView setProgressTintColor:color];
     
     [progressView setProgress:absi * 0.5f animated:YES];
 }
