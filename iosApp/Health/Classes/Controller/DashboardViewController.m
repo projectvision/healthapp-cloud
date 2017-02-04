@@ -239,7 +239,7 @@ static CGFloat const kHeaderHeight = 30.0f;
             
         //completion rate
         case 2:
-            return 1;
+            return 2;
             
         //healthrisk
         case 3:
