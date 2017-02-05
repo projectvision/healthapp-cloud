@@ -22,7 +22,7 @@ general:
     #- /bin/sh scripts/ui.sh
 test:
   override:
-    - set -o pipefail && xcodebuild -workspace 'iosApp/Yabbit.xcworkspace' -scheme 'Yabbit'
+    - set -o pipefail && xcodebuild -workspace 'Yabbit.xcworkspace' -scheme 'Yabbit'
       -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 7"
       GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES clean test | xcpretty -c
       --report junit --output ${CIRCLE_TEST_REPORTS}/junit.xml
