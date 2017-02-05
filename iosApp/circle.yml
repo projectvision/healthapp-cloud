@@ -1,6 +1,8 @@
 machine:
   xcode:
     version: "8.2.1"
+  swift:
+    version: "2.3"
 general:
   artifacts:
     - "Yabbit.ipa"
