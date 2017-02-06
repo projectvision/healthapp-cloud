@@ -155,6 +155,7 @@ static CGFloat const kHeaderHeight = 30.0f;
     SharedData *sharedData = [SharedData sharedData];
     [sharedData loadChallengesWithCompletion:nil];
     [sharedData loadTodayChallenges:YES];
+    [sharedData loadCompletedChallengeList];
 }
 
 - (void)initBarButtonItem
@@ -239,7 +240,7 @@ static CGFloat const kHeaderHeight = 30.0f;
             
         //completion rate
         case 2:
-            return 1;
+            return 2;
             
         //healthrisk
         case 3:
@@ -666,7 +667,11 @@ static CGFloat const kHeaderHeight = 30.0f;
     SummaryCell *summaryCell = (SummaryCell *)[[[NSBundle mainBundle] loadNibNamed:@"SummaryCell" owner:self options:nil] objectAtIndex:0];
     if (indexPath.row == 0) {
         [summaryCell setSummaryCell:@"Success Rate: " :[self current2WeeksProgress]];
-    } //else {
+    } else if (indexPath.row == 1) {
+        [summaryCell setSummaryCell:@"Total Challenge Score: " :[self totalChallengeScore]];
+    }
+    
+    //else {
       //  [summaryCell setSummaryCell:@"For last 2 weeks: " :[self last2WeeksProgress]];
    // }
 
@@ -738,6 +743,19 @@ static CGFloat const kHeaderHeight = 30.0f;
     }
     
     return [NSString stringWithFormat:@"Diet:%@ Fitness:%@ Stress:%@", diet, fitness, stress];
+}
+
+- (NSString *)totalChallengeScore
+{
+    SharedData *sharedData = [SharedData sharedData];
+    NSArray *completedChallenges = sharedData.completedChallengeList;
+    long score = 0;
+    
+    for (Challenge *challenge in completedChallenges) {
+        score = score + challenge.point;
+    }
+
+    return [NSString stringWithFormat:@"%li", score];
 }
 
 
