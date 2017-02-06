@@ -1,31 +1,27 @@
 machine:
   xcode:
     version: "8.2.1"
+  GYM_CODE_SIGNING_IDENTITY: "iPhone Developer: Shingai Samudzi (C8D554SC6F)"
   swift:
     version: "2.3"
 general:
   artifacts:
     - "Yabbit.ipa"
-#test:
-  #post:
-    #- /bin/sh scripts/add-key.sh
-    #- ipa build -c Release --verbose >$CIRCLE_ARTIFACTS/ipabuild.log
-    #- xcodebuild -workspace "Yabbit.xcworkspace" -showBuildSettings | grep BUILT_PRODUCTS_DIR
-    #- find ~/ -name "Yabbit.app"
-    #- xcodebuild -sdk iphoneos -workspace "Yabbit.xcworkspace" -scheme "Yabbit" -configuration "Release" clean build archive -showBuildSettings | grep BUILT_PRODUCTS_DIR
-    #- cp Yabbit.ipa $CIRCLE_ARTIFACTS/Yabbit-$CIRCLE_BRANCH-$CIRCLE_BUILD_NUM
-    #- /bin/sh scripts/remove-key.sh
-    #- xcodebuild -workspace "Yabbit.xcworkspace" -scheme "Yabbit" -configuration "Debug" -showBuildSettings | grep BUILT_PRODUCTS_DIR
-    #- instruments -t "/Applications/Xcode-6.3.1.app/Contents/Applications/Instruments.app/Contents/PlugIns/AutomationInstrument.xrplugin/Contents/Resources/Automation.tracetemplate" -w "iPhone 5s (8.3 Simulator)" "/Users/distiller//Library/Developer/Xcode/DerivedData/Yabbit-bflznhwzevvfgscekrwvmyfjrfrm/Build/Products/Debug-iphonesimulator/Yabbit.app" -e UIASCRIPT "scripts/automation.js" -e UIARESULTSPATH $CIRCLE_ARTIFACTS/
-    #DIR='xcodebuild -workspace "Yabbit.xcworkspace" -scheme "Yabbit" -configuration "Debug" -showBuildSettings | grep '^\s*BUILT_PRODUCTS_DIR' | head -n 1 | sed 's/^\(.*\)\s*=\s*\(.*\)$/\2/''
-    #- instruments -t "/Applications/Xcode-6.3.1.app/Contents/Applications/Instruments.app/Contents/PlugIns/AutomationInstrument.xrplugin/Contents/Resources/Automation.tracetemplate" -w "iPhone 5s (8.3 Simulator)" "$DIR/Yabbit.app" -e UIASCRIPT "scripts/automation.js" -e UIARESULTSPATH $CIRCLE_ARTIFACTS/
-    #- /bin/sh scripts/ui.sh
+  build_dir: iosApp
 test:
   override:
-    - set -o pipefail && xcodebuild -workspace 'iosApp/Yabbit.xcworkspace' -scheme 'Yabbit'
-      -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 7"
-      GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES clean test | xcpretty -c
-      --report junit --output ${CIRCLE_TEST_REPORTS}/junit.xml
+    - set -o pipefail &&
+      xcodebuild
+        CODE_SIGNING_REQUIRED=NO
+        CODE_SIGN_IDENTITY=
+        PROVISIONING_PROFILE=
+        -sdk iphonesimulator
+        -destination 'platform=iOS Simulator,OS=9.0,name=iPhone 6'
+        -workspace Yabbit.xcworkspace
+        -scheme "Yabbit"
+        clean build test |
+      tee $CIRCLE_ARTIFACTS/xcode_raw.log |
+      xcpretty --color --report junit --output $CIRCLE_TEST_REPORTS/xcode/results.xml
 
 
 
