@@ -26,6 +26,7 @@
 #import "GPSManager.h"
 #import "MotionManager.h"
 #import "SessionManager.h"
+#import "LocalNotificationHelper.h"
 
 static CGFloat const kHeaderHeight = 30.0f;
 
@@ -142,6 +143,8 @@ static CGFloat const kHeaderHeight = 30.0f;
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didBecomeActive:)
                                                  name:UIApplicationDidBecomeActiveNotification object:nil];
+    
+    [LocalNotificationHelper scheduleNotifications];
 }
 
 - (void)initUI
