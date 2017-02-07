@@ -41,42 +41,38 @@
     [self clearNotifications];
     
     NSDate *now = [NSDate date];
-    NSLog(@"%@", [now description]);
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *nowComponents = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:now];
     NSDate *today = [calendar dateFromComponents:nowComponents];
-    NSLog(@"%@", [today description]);
     
     NSDateComponents *components = [[NSDateComponents alloc] init];
     
-    components.hour = 8;
+    components.hour = 8; // 8am
     NSDate *morning = [calendar dateByAddingComponents:components toDate:today options:0];
-    NSLog(@"%@", [morning description]);
-    UILocalNotification *morningReminder = self.template;
+    UILocalNotification *morningReminder = self.notificationTemplate;
     morningReminder.fireDate = morning;
     morningReminder.alertBody = @"It's time to accept new challenges. The old challenges will be expired.";
-    [[UIApplication sharedApplication] scheduleLocalNotification:morningReminder]; // 8am
+    morningReminder.category = @"NEW_CHALLENGES";
+    [[UIApplication sharedApplication] scheduleLocalNotification:morningReminder];
     
-    components.hour = 14;
+    components.hour = 14; // 2pm
     NSDate *afternoon = [calendar dateByAddingComponents:components toDate:today options:0];
-    NSLog(@"%@", [afternoon description]);
-    UILocalNotification *afternoonReminder = self.template;
+    UILocalNotification *afternoonReminder = self.notificationTemplate;
     afternoonReminder.fireDate = afternoon;
-    afternoonReminder.alertBody = @"Don't forget to complete your challenges for today";
-    [[UIApplication sharedApplication] scheduleLocalNotification:afternoonReminder]; // 2pm
+    afternoonReminder.alertBody = @"Don't forget to complete your challenges for today.";
+    afternoonReminder.category = @"DONT_FORGET";
+    [[UIApplication sharedApplication] scheduleLocalNotification:afternoonReminder];
     
-    components.hour = 20;
-//    components.hour = 17;
-//    components.minute = 15;
+    components.hour = 20; // 8pm
     NSDate *evening = [calendar dateByAddingComponents:components toDate:today options:0];
-    NSLog(@"%@", [evening description]);
-    UILocalNotification *eveningReminder = self.template;
+    UILocalNotification *eveningReminder = self.notificationTemplate;
     eveningReminder.fireDate = evening;
-    eveningReminder.alertBody = @"Don't forget to complete your challenges for today";
-    [[UIApplication sharedApplication] scheduleLocalNotification:eveningReminder]; //8pm
+    eveningReminder.alertBody = @"Don't forget to complete your challenges for today.";
+    eveningReminder.category = @"DONT_FORGET";
+    [[UIApplication sharedApplication] scheduleLocalNotification:eveningReminder];
 }
 
-+(UILocalNotification *)template
++(UILocalNotification *)notificationTemplate
 {
     UILocalNotification *notification = [[UILocalNotification alloc] init];
     

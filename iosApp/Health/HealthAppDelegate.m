@@ -148,6 +148,15 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    if ([notification.category isEqual: @"DONT_FORGET"]) {
+        [rootViewController setCenterViewController:dashboardViewController];
+    } else if ([notification.category isEqual: @"NEW_CHALLENGES"]) {
+        [rootViewController setCenterViewController:challengeViewController];
+    }
+}
+
 - (void) resetUI :(int)num
 {
     if ( dashboardViewController != nil )
