@@ -82,6 +82,7 @@
     
     notification.timeZone = [NSTimeZone defaultTimeZone];
     notification.repeatInterval = NSCalendarUnitDay;
+    notification.applicationIconBadgeNumber = 1;
     
     return notification;
 }
