@@ -485,34 +485,4 @@ static SharedData *g_sharedInfo = nil;
 }
 
 
-- (void) scheduleNotification
-{
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    
-    PFUser *currentUser = [PFUser currentUser];
-    
-    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
-    
-    if ( localNotif == nil )
-    {
-        return;
-    }
-    
-    NSDate *today = [NSDate date];
-    NSDate *fireDate = currentUser[@"fireDate"];
-    //NSDate *fireDate=today;
-    NSDate *date = [NSDate dateFromYear:[[today oneDayNext] year] month:[[today oneDayNext] monthOfYear] day:[[today oneDayNext] dayOfMonth] hour:[fireDate hourOfDay] minute:[[fireDate oneMinuteNext] minuteOfHour]];
-    
-    localNotif.fireDate = date;
-    localNotif.timeZone = [NSTimeZone defaultTimeZone];
-    localNotif.alertBody = @"It's time to accept new challenges. The old challenges will be expired.";
-    localNotif.alertAction = @"View";
-    localNotif.repeatInterval = NSCalendarUnitDay;
-    localNotif.applicationIconBadgeNumber = 1;
-    localNotif.userInfo = nil;
-    
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
-}
-
-
 @end
