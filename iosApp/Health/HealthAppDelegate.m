@@ -90,7 +90,7 @@
         self.backgroundTask = UIBackgroundTaskInvalid;
     }];
     
-        [LocalNotificationHelper notifyUserWithMessage:@"Have you copleted your challenges today?" inSeconds:6*60*60];
+//        [LocalNotificationHelper notifyUserWithMessage:@"Have you completed your challenges today?" inSeconds:6*60*60];
     
 }
 -(void)postGps{

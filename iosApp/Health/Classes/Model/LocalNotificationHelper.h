@@ -11,4 +11,5 @@
 @interface LocalNotificationHelper : NSObject
 
 +(void)notifyUserWithMessage:(NSString *)message inSeconds:(NSTimeInterval)inSeconds;
++(void)scheduleNotifications;
 @end
