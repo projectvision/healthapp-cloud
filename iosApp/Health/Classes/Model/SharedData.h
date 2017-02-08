@@ -39,7 +39,6 @@
 
 - (BOOL) areTodayChallengesValid;
 - (void) loadCompletedChallengeList;
-- (void) scheduleNotification;
 - (NSMutableDictionary *) randomSortedChallenges;
 
 -(void)updateAcceptedChallengedWithExpirationTime:(NSDate*)epirationTime;
