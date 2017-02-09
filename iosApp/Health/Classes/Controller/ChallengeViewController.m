@@ -150,21 +150,20 @@
     
     if (show)
     {
-       NSDate *now = [NSDate date];
-       NSDate *fireTime = [PFUser currentUser][@"fireDate"];
-       // NSDate *fireTime=now;
+        NSDate *now = [NSDate date];
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        NSDateComponents *components = [calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:now];
+        components.hour = 8;
+        components.minute = 0;
+        NSDate *refresh = [calendar dateFromComponents:components];
         
-        NSDate *tomorrow = [now oneDayNext];
-        
-        NSDate *todayFireDate = [NSDate dateFromYear:[now year] month:[now monthOfYear] day:[now dayOfMonth] hour:[fireTime hourOfDay] minute:[fireTime minuteOfHour]];
-        NSTimeInterval timeLeft = [todayFireDate timeIntervalSinceDate:now];
-        
-        if (timeLeft < 0)
-        {
-            NSDate *tomorrowFireDate = [NSDate dateFromYear:[tomorrow year] month:[tomorrow monthOfYear] day:[tomorrow dayOfMonth] hour:[fireTime hourOfDay] minute:[fireTime minuteOfHour]];
-            timeLeft = [tomorrowFireDate timeIntervalSinceDate:now];
+        if ([refresh compare:now] != NSOrderedDescending) {
+            NSDateComponents *tomorrow = [[NSDateComponents alloc] init];
+            tomorrow.day = 1;
+            refresh = [calendar dateByAddingComponents:tomorrow toDate:refresh options:0];
         }
-    
+
+        NSTimeInterval timeLeft = [refresh timeIntervalSinceDate:now];
         timeLeft /= 3600;
         
         _leftLabel.text = [NSString stringWithFormat:@"~%d hours left before new challenges", (int)ceil(timeLeft)];
